@@ -1,0 +1,140 @@
+🍦 CREAMY DELIGHT HUB – Ice Cream Shop Website
+
+A modern, responsive front-end website designed for an ice cream shop or dessert brand. This project includes a complete landing page, user authentication pages, theme toggling, smooth navigation, and customer interaction sections.
+
+🌟 Features
+🏠 Main Landing Page (home.html)
+
+Fully responsive design
+
+Hero banner
+
+Featured product showcase
+
+Customer feedback section
+
+Contact form section
+
+Smooth-scroll navigation
+
+🔐 User Authentication
+
+login.html – User login page
+
+registration.html – User sign-up page
+
+Styled and mobile-friendly forms
+
+🌓 Dynamic Theme Toggler
+
+Implemented through JavaScript:
+
+Dark mode (default)
+
+Light mode via toggle button
+
+🧭 Navigation
+
+Sticky header
+
+Smooth scrolling
+
+Mobile-friendly menu toggle
+
+📬 Contact Information
+
+Footer includes:
+
+Address: SN Puram, Vijayawada
+
+Phone: 9032535310
+
+Email: eCream@domain.com
+
+👩‍💻 Developer
+
+Project developed by Likhitha.
+
+📂 Project Structure
+Creamy Delight Hub/
+├── home.html           # Main landing page
+├── login.html          # User login page
+├── registration.html   # User sign-up page
+├── scripts.js          # JS for theme toggle & menu behavior
+├── styles.css          # CSS for login page
+├── stylo.css           # CSS for registration page
+├── stylos.css          # CSS for home page
+├── image/
+│    ├── login.jpg      # Login page background image
+│    └── registration.jpg # Registration page background
+
+🚀 Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/YourUsername/Creamy-Delight-Hub.git
+
+2️⃣ Navigate to the project
+cd "Creamy Delight Hub"
+
+3️⃣ Open in Browser
+
+Double-click home.html or open via Chrome/Firefox.
+
+🛠️ Important Notes
+✔ 1. Image Path Fix
+
+The login and registration backgrounds require this folder structure:
+
+Creamy Delight Hub/
+ ├── image/
+ │     ├── login.jpg
+ │     └── registration.jpg
+
+
+Ensure the image folder exists and contains the correct files.
+
+✔ 2. Front-End Only
+
+The project is HTML + CSS + JavaScript.
+Forms (login, signup, contact) do not connect to a real backend.
+
+Login button → redirects to home.html
+
+Sign Up button → redirects to login.html
+
+Contact form → no backend processing
+
+To make it functional, backend tech like Node.js, Django, or PHP is required.
+
+✔ 3. CSS Optimization
+
+There are three CSS files:
+
+styles.css
+
+stylo.css
+
+stylos.css
+
+For long-term maintenance, they can be merged into a single stylesheet (optional).
+
+🎯 Future Enhancements
+
+Backend integration for authentication
+
+Product management system
+
+Testimonial slider
+
+Mobile menu animations
+
+Single unified stylesheet
+
+Cart & checkout system
+
+❤️ Contributing
+
+Feel free to fork the repository and submit pull requests.
+
+📜 License
+
+This project is open-source under the MIT License.
