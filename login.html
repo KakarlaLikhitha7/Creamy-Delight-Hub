@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body background="image/login.jpg">
-    <div class="container">
-      <div class="center">
-          <h1>Login</h1>
-          <form action="" method="POST">
-              <div class="txt_field">
-                  <input type="text" name="text" required>
-                  <span></span>
-                  <label>Username</label>
-              </div>
-              <div class="txt_field">
-                  <input type="password" name="password" required>
-                  <span></span>
-                  <label>Password</label>
-              </div>
-              <div class="pass">Forget Password?</div>
-              <input name="submit" type="submit" value="Login" onclick="window.location.href='home.html'">
-              <div class="signup_link">
-                 Click on Registration <a href="registration.html">REGISTRATION</a>
-              </div>
-          </form>
-      </div>
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body background="image/login.jpg">
+
+  <div class="container">
+    <div class="center">
+
+      <h1>Login</h1>
+      <form onsubmit="return validateLogin()">
+
+        <div class="txt_field">
+          <input type="text" id="username" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="password" id="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+
+        <div class="pass">Forget Password?</div>
+        <input type="submit" value="Login">
+
+        <div class="signup_link">
+          Click on Registration <a href="index.html">REGISTRATION</a>
+        </div>
+
+      </form>
+
     </div>
-  </body>
+  </div>
+
+  <script>
+    function validateLogin() {
+
+      let username = document.getElementById("username").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      if (username === "") {
+        alert("Please enter your Username");
+        return false;
+      }
+      if (password === "") {
+        alert("Please enter your Password");
+        return false;
+      }
+      let regName = localStorage.getItem("regName");
+      let regPassword = localStorage.getItem("regPassword");
+      if (!regName || !regPassword) {
+        alert("No user found! Please register first.");
+        window.location.href = "index.html";
+        return false;
+      }
+      if (username !== regName) {
+        alert("Username is incorrect!");
+        return false;
+      }
+      if (password !== regPassword) {
+        alert("Password is incorrect!");
+        return false;
+      }
+      alert("Login Successful!");
+      window.location.href = "home.html";
+      return false;
+    }
+  </script>
+
+</body>
 </html>
